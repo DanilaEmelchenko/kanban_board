@@ -1,0 +1,29 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/fonts.scss";
+
+.container {
+  width: 100%;
+  background-color: $blue-BgColor;
+  @include fontTextWhite();
+}
+
+.content {
+  padding: 0.8854vw 0 0.8854vw;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  gap: 1.875vw;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    display: none;
+  }
+}

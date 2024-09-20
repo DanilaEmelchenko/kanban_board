@@ -1,0 +1,50 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/fonts.scss";
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+
+  .profile-avatar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: $white-color;
+
+    .image-avatar {
+      width: 2.5vw;
+      height: 2.5vw;
+    }
+  }
+}
+
+.profile-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.image-arrow {
+  width: 1vw;
+  height: 1vw;
+}
+
+@media only screen and (max-width: 375px) {
+  .profile-wrapper {
+    .profile-avatar {
+      width: 2.2rem;
+      height: 2.2rem;
+      .image-avatar {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  .image-arrow {
+    width: 1rem;
+    height: 0.5rem;
+  }
+}

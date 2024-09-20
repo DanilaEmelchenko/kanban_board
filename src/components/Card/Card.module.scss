@@ -1,0 +1,85 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/fonts.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2146vw;
+  border-radius: 10px;
+  background-color: $gray-BgColor;
+  width: 100%;
+  padding: 0.9717vw 0.9717vw 0.6478vw 0.9717vw;
+
+  .title {
+    @include fontTextBlack();
+  }
+
+  .input,
+  .input-error {
+    padding: 0.5668vw;
+    border-radius: 5px;
+    background-color: $white-color;
+    outline: none;
+    border: none;
+    @include fontTextBlack();
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.input-error {
+  border: 1px solid red !important;
+}
+
+.button-add,
+.button-submit {
+  width: fit-content;
+  margin-top: 0.1619vw;
+  padding: 0.7287vw;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  color: $gray-btnColor;
+  @include fontBtn();
+
+  &:hover {
+    background-color: $white-color;
+  }
+}
+
+.button-add.disabled {
+  background-color: #c0c0c0;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.button-submit {
+  background-color: $blueLight-BgColor;
+  color: $white-color;
+
+  &:hover {
+    background-color: $blue-BgColor;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    gap: 0.8rem;
+    padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+    .title {
+      font-size: 1rem;
+    }
+    .input,
+    .input-error {
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+  }
+
+  .button-add,
+  .button-submit {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
