@@ -3,6 +3,7 @@ import { TaskContext } from "../../context/index";
 import Button from "../ui/Button/Button";
 import cn from "classnames";
 import CardSelect from '../ui/CardSelect/CardSelect';
+import { Link } from 'react-router-dom';
 
 const Finished = ({ cardStyles }) => {
   const { finished, progressTasks, taskFinished } = useContext(TaskContext);
@@ -13,7 +14,12 @@ const Finished = ({ cardStyles }) => {
     <>
       {
         finished.map(task => (
-          <div key={task.id} className={cardStyles.input}>{task.text}</div>
+          <Link
+            key={task.id}
+            to={`/tasks/${task.id}`}
+            className={cardStyles.input}>
+            {task.text}
+          </Link>
         ))
       }
       {showDropdown && (

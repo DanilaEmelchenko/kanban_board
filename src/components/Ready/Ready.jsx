@@ -2,18 +2,26 @@ import { useContext, useState } from "react";
 import Button from "../ui/Button/Button";
 import cn from "classnames";
 import { TaskContext } from "../../context/index";
-import CardSelect from '../ui/CardSelect/CardSelect';
+import CardSelect from "../ui/CardSelect/CardSelect";
+import { Link } from "react-router-dom";
 
 const Ready = ({ cardStyles }) => {
   const { readyTasks, backlogTasks, taskReady } = useContext(TaskContext);
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const isButtonDisabled = backlogTasks.length === 0 || backlogTasks.length === null;
+  const isButtonDisabled =
+    backlogTasks.length === 0 || backlogTasks.length === null;
 
   return (
     <>
-      {readyTasks.map(task => (
-        <div key={task.id} className={cardStyles.input}>{task.text}</div>
+      {readyTasks.map((task) => (
+        <Link
+          key={task.id}
+          to={`/tasks/${task.id}`}
+          className={cardStyles.input}
+        >
+          {task.text}
+        </Link>
       ))}
       {showDropdown && (
         <CardSelect
@@ -23,8 +31,10 @@ const Ready = ({ cardStyles }) => {
             setShowDropdown(false);
           }}
         >
-          <option disabled selected>Выберите задачу</option>
-          {backlogTasks.map(task => (
+          <option disabled selected>
+            Выберите задачу
+          </option>
+          {backlogTasks.map((task) => (
             <option key={task.id} value={task.id}>
               {task.text}
             </option>
@@ -37,11 +47,12 @@ const Ready = ({ cardStyles }) => {
         className={cn(cardStyles["button-add"], {
           [cardStyles["disabled"]]: isButtonDisabled,
         })}
-        disabled={isButtonDisabled}>
+        disabled={isButtonDisabled}
+      >
         + Add card
-      </Button >
+      </Button>
     </>
   );
-}
+};
 
 export default Ready;

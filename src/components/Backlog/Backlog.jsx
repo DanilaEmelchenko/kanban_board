@@ -38,7 +38,10 @@ const Backlog = ({ cardStyles }) => {
   return (
     <>
       {backlogTasks.map((task) => (
-        <Link key={task.id} to={`/tasks/${task.id}`} className={cardStyles.input}>
+        <Link
+          key={task.id}
+          to={`/tasks/${task.id}`}
+          className={cardStyles.input}>
           {task.text}
         </Link>
       ))}

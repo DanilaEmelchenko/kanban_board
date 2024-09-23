@@ -1,0 +1,48 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/fonts.scss";
+
+.container {
+  width: 100%;
+  background-color: $blueLight-BgColor;
+  flex: 1;
+  display: flex;
+  padding: 1.6194vw 0 1.6194vw;
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: $white-color;
+  display: flex;
+  justify-content: space-between;
+  .description {
+    padding-left: 2.2672vw;
+    .title {
+      @include fontTitleBlack();
+    }
+  }
+  .close {
+    margin: 1.3765vw 1.8623vw 0 0;
+    position: relative;
+    width: 4.0486vw;
+    height: 4.0486vw;
+    cursor: pointer;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background-color: $gray-btnColor;
+      width: 2.5911vw;
+      height: 0.0810vw;
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

@@ -1,9 +1,8 @@
-
+import MainTasksId from '../components/MainTasksId/MainTasksId';
 
 const TasksId = () => {
-
   return (
-    <div>TasksId</div>
+    <MainTasksId />
   );
 };
 

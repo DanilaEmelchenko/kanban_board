@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { TaskContext } from "../../context/index";
 import Button from "../ui/Button/Button";
 import cn from "classnames";
-import CardSelect from '../ui/CardSelect/CardSelect';
+import CardSelect from "../ui/CardSelect/CardSelect";
+import { Link } from "react-router-dom";
 
 const InProgress = ({ cardStyles }) => {
   const { progressTasks, readyTasks, taskProgress } = useContext(TaskContext);
@@ -11,11 +12,15 @@ const InProgress = ({ cardStyles }) => {
   const isButtonDisabled = readyTasks.length === 0;
   return (
     <>
-      {
-        progressTasks.map(task => (
-          <div key={task.id} className={cardStyles.input}>{task.text}</div>
-        ))
-      }
+      {progressTasks.map((task) => (
+        <Link
+          key={task.id}
+          to={`/tasks/${task.id}`}
+          className={cardStyles.input}
+        >
+          {task.text}
+        </Link>
+      ))}
       {showDropdown && (
         <CardSelect
           className={cardStyles.select}
@@ -24,8 +29,10 @@ const InProgress = ({ cardStyles }) => {
             setShowDropdown(false);
           }}
         >
-          <option disabled selected>Выберите задачу</option>
-          {readyTasks.map(task => (
+          <option disabled selected>
+            Выберите задачу
+          </option>
+          {readyTasks.map((task) => (
             <option key={task.id} value={task.id}>
               {task.text}
             </option>
@@ -37,9 +44,10 @@ const InProgress = ({ cardStyles }) => {
         className={cn(cardStyles["button-add"], {
           [cardStyles["disabled"]]: isButtonDisabled,
         })}
-        disabled={isButtonDisabled}>
+        disabled={isButtonDisabled}
+      >
         + Add card
-      </Button >
+      </Button>
     </>
   );
 };
