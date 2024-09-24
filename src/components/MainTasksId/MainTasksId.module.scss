@@ -6,7 +6,7 @@
   background-color: $blueLight-BgColor;
   flex: 1;
   display: flex;
-  padding: 1.6194vw 0 1.6194vw;
+  padding: 1.625rem 0 1.625rem;
 }
 
 .content {
@@ -17,16 +17,16 @@
   display: flex;
   justify-content: space-between;
   .description {
-    padding-left: 2.2672vw;
+    padding: 1.375rem 0 0 1.75rem;
     .title {
       @include fontTitleBlack();
     }
   }
   .close {
-    margin: 1.3765vw 1.8623vw 0 0;
+    margin: 1.375rem 1.75rem 0 0;
     position: relative;
-    width: 4.0486vw;
-    height: 4.0486vw;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
     &::after,
     &::before {
@@ -36,7 +36,7 @@
       top: 50%;
       background-color: $gray-btnColor;
       width: 2.5911vw;
-      height: 0.0810vw;
+      height: 0.081vw;
     }
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
@@ -44,5 +44,10 @@
     &::before {
       transform: translate(-50%, -50%) rotate(-45deg);
     }
+  }
+
+  .text {
+    padding-top: 2.1875rem;
+    @include fontTextBlack();
   }
 }

@@ -7,32 +7,32 @@
 }
 
 @mixin fontSelect() {
-  @include roboto(1.1336vw, 400);
+  @include roboto(0.875rem, 400);
   color: $black-color;
 }
 
 @mixin fontTextBlack() {
-  @include roboto(1.4575vw, 400);
+  @include roboto(1.125rem, 400);
   color: $black-color;
 }
 
 @mixin fontTextWhite() {
-  @include roboto(1.4575vw, 400);
+  @include roboto(1.125rem, 400);
   color: $white-color;
 }
 
 @mixin fontBtn() {
-  @include roboto(1.4575vw, 400);
+  @include roboto(1.125rem, 400);
   color: $gray-btnColor;
 }
 
 @mixin fontTitleBlack() {
-  @include roboto(1.9433vw, 400);
+  @include roboto(1.5rem, 400);
   color: $black-color;
 }
 
 @mixin fontTitle() {
-  @include roboto(2.2672vw, 400);
+  @include roboto(1.75rem, 400);
   color: $white-color;
 }
 

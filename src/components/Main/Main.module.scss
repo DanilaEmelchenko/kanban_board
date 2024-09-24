@@ -8,18 +8,18 @@
 }
 
 .content {
-  padding: 1.6194vw 0 1.6667vw;
+  padding: 1.25rem 0 2rem;
   width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 1.9433vw;
+  
 }
 
 @media only screen and (max-width: 375px) {
   .content {
     width: 80%;
-    padding-top: 5.5rem;
+    padding-top: 6.6875rem;
     flex-wrap: wrap;
     gap: 2.7rem;
   }

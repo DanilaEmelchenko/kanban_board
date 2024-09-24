@@ -4,11 +4,11 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 1.2146vw;
+  gap: 0.9375rem;
   border-radius: 10px;
   background-color: $gray-BgColor;
-  width: 100%;
-  padding: 0.9717vw 0.9717vw 0.6478vw 0.9717vw;
+  width: 16.125rem;
+  padding: 0.75rem 0.75rem 0.5rem 0.75rem;
 
   .title {
     @include fontTextBlack();
@@ -16,7 +16,7 @@
 
   .input,
   .input-error {
-    padding: 0.5668vw;
+    padding: 0.4375rem 0.5625rem 0.4375rem 0.5rem;
     border-radius: 5px;
     background-color: $white-color;
     outline: none;
@@ -34,8 +34,8 @@
 .button-add,
 .button-submit {
   width: fit-content;
-  margin-top: 0.1619vw;
-  padding: 0.7287vw;
+  margin-top: 0.125rem;
+  padding: 0.25rem;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -43,7 +43,7 @@
   color: $gray-btnColor;
   @include fontBtn();
 
-  &:hover {
+  &:hover, &:active {
     background-color: $white-color;
   }
 }
@@ -57,7 +57,6 @@
 .button-submit {
   background-color: $blueLight-BgColor;
   color: $white-color;
-
   &:hover {
     background-color: $blue-BgColor;
   }

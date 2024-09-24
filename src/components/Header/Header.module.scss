@@ -7,7 +7,7 @@
 }
 
 .content {
-  padding: 0.3646vw 0 0.4167vw;
+  padding: 0.4375rem 0 0.5rem;
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -23,9 +23,10 @@
 @media only screen and (max-width: 375px) {
   .container {
     background-color: $blueLight-BgColor;
-   }
+  }
   .content {
-    padding-top: 0.5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0;
     justify-content: flex-end;
   }
   .title {

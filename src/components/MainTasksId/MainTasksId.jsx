@@ -47,6 +47,7 @@ const MainTasksId = () => {
         <div className={s.description}>
           {tasks && <h2 className={s.title}>{tasks.text}</h2>}
           <textarea
+            className={s.text}
             onChange={saveDescription}
             value={description}
             cols="80"
